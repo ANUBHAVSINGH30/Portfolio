@@ -13,7 +13,7 @@ function Hero() {
           
           {/* Text */}
             <div className="text-center md:text-left">
-              <h1 className="text-5xl md:text-5xl font-semibold tracking-tight text-black">
+              <h1 className="text-4xl md:text-5xl font-semibold tracking-tight text-black whitespace-nowrap">
                 Hi, I&apos;m Anubhav
               </h1>
 
