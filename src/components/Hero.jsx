@@ -13,11 +13,11 @@ function Hero() {
           
           {/* Text */}
             <div className="text-center md:text-left">
-              <h1 className="text-4xl md:text-5xl font-semibold tracking-tight text-black">
+              <h1 className="text-5xl md:text-5xl font-semibold tracking-tight text-black">
                 Hi, I&apos;m Anubhav
               </h1>
 
-              <p className="mt-4 text-[10px] md:text-[22px] text-gray-500 max-w-xl font-light tracking-tight leading-8">
+              <p className="mt-4 text-lg md:text-2xl text-gray-500 max-w-xl font-light tracking-tight leading-relaxed">
                 I’m a full-stack developer with a strong frontend focus, building clean, practical web applications. Active on Twitter.
               </p>
             </div>
