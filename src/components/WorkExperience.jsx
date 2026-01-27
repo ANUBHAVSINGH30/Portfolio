@@ -3,7 +3,7 @@ import { experience } from "../data/experience";
 
 function Experience() {
   return (
-    <section className="pb-24">
+    <section className="pb-19">
       <Container>
         <div className="flex flex-col items-center justify-center">
           <div className="max-w-2xl w-full">
@@ -19,16 +19,16 @@ function Experience() {
             >
               {/* Left side */}
               <div className="flex items-center gap-4">
-                <div className="h-12 w-12 rounded-full border border-gray-200 flex items-center justify-center">
+                <div className="h-12 w-12 rounded-full border border-gray-200 bg-white flex items-center justify-center">
                   <img
                     src={item.logo}
                     alt={item.company}
-                    className="h-6 w-6 object-contain"
+                    className="h-8 w-8 object-contain"
                   />
                 </div>
 
                 <div>
-                  <p className="font-medium">
+                  <p className="font-medium text-black">
                     {item.company}
                   </p>
                   <p className="text-gray-500 text-sm">

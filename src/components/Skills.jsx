@@ -4,7 +4,7 @@ import { skills } from "../data/skills";
 
 function Skills (){
     return(
-        <section className="pb-24">
+        <section className="pb-20">
             <Container>
                 <div className="flex flex-col items-center justify-center">
                     <div className="max-w-2xl w-full">

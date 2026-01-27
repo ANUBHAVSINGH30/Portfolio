@@ -2,7 +2,7 @@ import Container from "./Container";
 
 function About() {
   return (
-    <section className="pb-24">
+    <section className="pb-18">
       <Container>
         <div className="flex flex-col items-center justify-center">
     
