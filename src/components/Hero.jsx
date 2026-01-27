@@ -1,14 +1,15 @@
 import Container from "./Container";
+import DotBackground from "./DotBackground";
 
 function Hero() {
   return (
-    <section className="relative pt-[18vh] pb-[12vh] overflow-hidden">
+    <section className="relative pt-[14vh] pb-[4vh] overflow-hidden">
 
       {/* dots stay full-width */}
-      {/* background effects stay outside */}
+      <DotBackground position="top" />
 
       <Container>
-        <div className="flex items-start gap-6">
+        <div className="flex items-start gap-6 justify-center max-w-2xl mx-auto">
           
           {/* Text */}
             <div>
@@ -16,16 +17,15 @@ function Hero() {
                 Hi, I&apos;m Anubhav
               </h1>
 
-              <p className="mt-4 text-2xl text-gray-500 max-w-md leading-6">
-                Full Stack Web Developer. I love building things.
-                <br />
-                Very active on Twitter.
+              <p className="mt-4 text-2xl text-gray-500 max-w-xl font-light tracking-tight leading-relaxed">
+                Frontend-focused full-stack developer building real-world web applications
+                with React, Next, Tailwind CSS, and Supabase.
               </p>
             </div>
 
             {/* Image */}
             <div className="shrink-0 mt-1">
-              <div className="h-24 w-24 rounded-full overflow-hidden">
+              <div className="h-40 w-40 rounded-full overflow-hidden border-4 border-gray-300">
                 <img
                   src="/profile-image.jpeg"
                   alt="Anubhav"

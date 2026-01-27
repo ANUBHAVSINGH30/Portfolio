@@ -4,29 +4,20 @@ function About() {
   return (
     <section className="pb-24">
       <Container>
-        
-        <h2 className="text-xl font-medium text-white">
-          About
-        </h2>
+        <div className="flex flex-col items-center justify-center">
+    
 
-        <div className="mt-4 space-y-4 text-gray-500 leading-relaxed max-w-2xl">
-          <h2 className="text-3xl text-black font-semibold tracking-tight">About</h2>
-          <p>
-            I’m a B.Tech ECE student who enjoys building clean, functional
-            web interfaces. I mainly work with React and Tailwind CSS,
-            focusing on simplicity and performance.
+        <div className="mt-6 space-y-4 text-gray-500 leading-relaxed max-w-2xl">
+          <h2 className="text-2xl text-black font-semibold tracking-tight">About</h2>
+          <p className="font-light">           
+            I'm a <span className="font-semibold text-black underline">B.Tech ECE student at Tezpur University</span> who builds clean,
+            functional web interfaces using <span className="font-semibold text-black underline">React, Next and Tailwind CSS</span>, 
+            with a focus on simplicity and performance. I enjoy understanding how things work under the hood, 
+            not just how they look, and <span className="font-semibold text-black underline"> I've been strengthening my frontend fundamentals by building real projects.</span> 
+            Outside of coding, I actively follow tech and design discussions.
           </p>
 
-          <p>
-            I like understanding how things work under the hood instead of
-            just making them look good. Lately, I’ve been improving my
-            frontend fundamentals and building real projects.
-          </p>
-
-          <p>
-            Outside of coding, I play volleyball and follow tech and design
-            discussions online.
-          </p>
+        </div>
         </div>
 
       </Container>
