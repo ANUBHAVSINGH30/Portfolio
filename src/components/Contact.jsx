@@ -46,6 +46,15 @@ function Contact() {
                 >
                   with a direct question on twitter
                 </a>{" "}
+                or {" "}
+                <a
+                  href="mailto:anubhavmrx@gmail.com"
+                  target="_blank"
+                  rel="noopener nereferrer"
+                  className="text-teal-400 hover:underline"  
+                >
+                  mail me here
+                </a>{" "}
                 and I'll respond whenever I can. I will ignore all soliciting.
               </p>
 
