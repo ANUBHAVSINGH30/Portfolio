@@ -39,14 +39,14 @@ export const projects = [
   },
   {
     id: 4,
-    title: "Betana",
+    title: "JaaneKhana",
     description:
-      "Built the frontend for a product-based project selected in the Top 6 teams in India at IEEE IDEARUN. Focused on UI structure, responsiveness, and product flow.",
-    image: "/betana.png",
-    timeline: "2023",
+      "JaaneKhana uses Gemini vision to analyze food labels, detect misleading claims, and deliver personalized multilingual advice via web and Telegram.",
+    image: "/jaanekhana.png",
+    timeline: "2025",
     website: null,
-    source: "https://github.com/ANUBHAVSINGH30/betana",
-    tech: ["React", "Tailwind"],
+    source: "https://github.com/ANUBHAVSINGH30/JaaneKhana",
+    tech: ["React", "Tailwind","Node.js"],
     featured: false,
   },
 ];
