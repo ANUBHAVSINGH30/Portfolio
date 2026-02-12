@@ -49,4 +49,16 @@ export const projects = [
     tech: ["React", "Tailwind","Node.js"],
     featured: false,
   },
+  {
+    id: 5,
+    title: "Aarogya Assam",
+    description:
+      "Next.js + Supabase-powered care platform streamlines medical Q&A, hospital search, and admin workflows with AI chat, real-time data, and scalable embeddings",
+    image: "/AarogyaAssam.png",
+    timeline: "2025",
+    website: "https://hackathonn-smoky.vercel.app/",
+    source: "https://github.com/ANUBHAVSINGH30/Hackathon",
+    tech: ["Next", "Tailwind","Node.js"],
+    featured: false,
+  },
 ];
