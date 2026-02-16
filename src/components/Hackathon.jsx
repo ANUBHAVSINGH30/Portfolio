@@ -25,9 +25,11 @@ function Hackathon() {
                         </div>
 
                         <div className="flex items-center justify-center">
-                             <p className="mt-7  text-gray-500 font-thin">During my time in university, I attended 3 hackathons. People from around the country
-                                 would come together and build incredible things in 2-3 days. It was eye-opening to see the endless 
-                                 possibilities brought to life by a group of motivated and passionate individuals.</p>
+                             <p className="mt-7  text-gray-500 font-thin">I have participated in several hackathons where teams came together 
+                                to build working solutions within 2–3 days. These experiences pushed me beyond tutorials and classroom concepts, forcing me 
+                                to apply my skills in real time. I learned how to communicate technical ideas clearly, adapt when things broke, and deliver 
+                                under pressure. Hackathons shaped my confidence as a developer and strengthened my ability to turn ideas into working prototypes
+                                 quickly.</p>
                         </div>
 
                         <div className="mt-14">
