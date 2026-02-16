@@ -1,6 +1,6 @@
 export const hackathon = [
 	{
-		date: "November 2025 till today",
+		date: "October 2025 till today",
 		title: "IEEE IdeaRun",
 		location: "India",
 		description:
@@ -8,7 +8,7 @@ export const hackathon = [
 		logo: "ieee logo.png",
 	},
 	{
-		date: "Febraury 2nd - 3rd, 2025",
+		date: "Febraury 2nd - 3rd, 2026",
 		title: "GuenARK",
 		location: "Gauhati University, Guwahati, Assam",
 		description:
@@ -16,7 +16,7 @@ export const hackathon = [
 		logo: "GuenARK.jpeg",
 	},
 	{
-		date: "Febraury 5th - 7th, 2025",
+		date: "Febraury 5th - 7th, 2026",
 		title: "NeuralX - (won 1st)",
 		location: "Tezpur University, Tezpur, Assam",
 		description:
