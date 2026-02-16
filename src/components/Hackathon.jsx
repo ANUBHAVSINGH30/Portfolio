@@ -31,21 +31,36 @@ function Hackathon() {
                         </div>
 
                         <div className="mt-14">
-                            <div className="relative">
-                                <div className="absolute left-6 top-0 bottom-0 w-px bg-gray-200" />
+                            <div>
+                                {hackathon.map((item, index) => {
+                                    const lastIndex = hackathon.length - 1;
+                                    const isFirst = index === 0;
+                                    const isLast = index === lastIndex;
 
-                                <div className="space-y-10">
-                                    {hackathon.map((item, index) => (
-                                        <div key={index} className="relative flex gap-6">
-                                            <div className="relative z-10 h-12 w-12 rounded-full border border-gray-200 bg-white flex items-center justify-center">
-                                                <img
-                                                    src={item.logo}
-                                                    alt={item.title}
-                                                    className="h-7 w-7 object-contain rounded-full"
-                                                />
+                                    return (
+                                        <div
+                                            key={index}
+                                            className="relative flex gap-6"
+                                        >
+                                            <div className="relative w-12 shrink-0 flex flex-col items-center">
+                                                {!isFirst && (
+                                                    <div className="absolute left-1/2 top-0 h-6 w-px -translate-x-1/2 bg-gray-200" />
+                                                )}
+
+                                                <div className="relative z-10 size-12 shrink-0 aspect-square rounded-full border border-gray-200 bg-white flex items-center justify-center">
+                                                    <img
+                                                        src={item.logo}
+                                                        alt={item.title}
+                                                        className="h-7 w-7 object-contain rounded-full"
+                                                    />
+                                                </div>
+
+                                                {!isLast && (
+                                                    <div className="w-px flex-1 bg-gray-200 mt-0" />
+                                                )}
                                             </div>
 
-                                            <div className="pt-1">
+                                            <div className={`pt-1 flex-1 ${isLast ? "" : "pb-14"}`}>
                                                 <p className="text-[13px] font-thin text-gray-500">{item.date}</p>
                                                 <p className="text-lg font-semibold text-black">{item.title}</p>
                                                 <p className="text-sm text-gray-500">{item.location}</p>
@@ -54,8 +69,8 @@ function Hackathon() {
                                                 </p>
                                             </div>
                                         </div>
-                                    ))}
-                                </div>
+                                    );
+                                })}
                             </div>
                         </div>
                     </div>
