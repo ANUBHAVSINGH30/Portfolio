@@ -13,18 +13,18 @@ function Hero() {
           
           {/* Text */}
             <div className="text-center md:text-left">
-              <h1 className="text-4xl md:text-5xl font-semibold tracking-tight text-black whitespace-nowrap">
+              <h1 className="text-4xl md:text-5xl font-semibold tracking-tight text-black dark:text-white whitespace-nowrap">
                 Hi, I&apos;m Anubhav
               </h1>
 
-              <p className="mt-4 text-lg md:text-2xl text-gray-500 max-w-xl font-light tracking-tight leading-relaxed">
-                I’m a full-stack developer with a strong frontend focus, building clean, practical web applications. Active on Twitter.
+              <p className="mt-4 text-lg md:text-2xl text-gray-500 dark:text-gray-400 max-w-xl font-light tracking-tight leading-relaxed">
+                I'm a full-stack developer with a strong frontend focus, building clean, practical web applications. Active on Twitter.
               </p>
             </div>
 
             {/* Image */}
             <div className="shrink-0 mt-1">
-              <div className="h-32 w-32 md:h-40 md:w-40 rounded-full overflow-hidden border-4 border-gray-300">
+              <div className="h-32 w-32 md:h-40 md:w-40 rounded-full overflow-hidden border-4 border-gray-300 dark:border-gray-600">
                 <img
                   src="/profile-image.jpeg"
                   alt="Anubhav"

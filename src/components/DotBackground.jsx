@@ -5,8 +5,9 @@ export default function DotBackground({ position }) {
         position === "top" ? "top-0" : "bottom-0"
       } h-32 pointer-events-none`}
       style={{
-        backgroundImage: "radial-gradient(circle, rgba(0,0,0,0.40) 1px, transparent 1px)",
+        backgroundImage: "radial-gradient(circle, rgba(0,0,0,0.40) 1px, transparent 1px), radial-gradient(circle, rgba(255,255,255,0.40) 1px, transparent 1px)",
         backgroundSize: "5px 5px",
+        backgroundPosition: "0 0, 2.5px 2.5px",
         maskImage:
           position === "top"
             ? "linear-gradient(to bottom, black 20%, transparent 80%)"

@@ -7,7 +7,7 @@ function Experience() {
       <Container>
         <div className="flex flex-col items-center justify-center">
           <div className="max-w-2xl w-full">
-            <h2 className="text-2xl text-black font-semibold tracking-tight">
+            <h2 className="text-2xl text-black dark:text-white font-semibold tracking-tight">
               Work Experience
             </h2>
 
@@ -19,7 +19,7 @@ function Experience() {
             >
               {/* Left side */}
               <div className="flex items-center gap-4">
-                <div className="h-12 w-12 rounded-full border border-gray-200 bg-white flex items-center justify-center">
+                <div className="h-12 w-12 rounded-full border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 flex items-center justify-center">
                   <img
                     src={item.logo}
                     alt={item.company}
@@ -28,17 +28,17 @@ function Experience() {
                 </div>
 
                 <div>
-                  <p className="font-medium text-black">
+                  <p className="font-medium text-black dark:text-white">
                     {item.company}
                   </p>
-                  <p className="text-gray-500 text-sm">
+                  <p className="text-gray-500 dark:text-gray-400 text-sm">
                     {item.role}
                   </p>
                 </div>
               </div>
 
               {/* Right side */}
-              <p className="text-gray-500 text-sm">
+              <p className="text-gray-500 dark:text-gray-400 text-sm">
                 {item.period}
               </p>
             </div>
