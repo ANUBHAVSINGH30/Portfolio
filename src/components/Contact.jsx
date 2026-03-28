@@ -7,15 +7,16 @@ function Contact() {
       <Container>
         <div className="flex flex-col items-center justify-center">
           <div className="max-w-2xl w-full">
-            <div className="relative overflow-hidden rounded-3xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 px-6 py-4 text-center">
+            <div className="relative overflow-hidden rounded-3xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-black px-6 py-4 text-center">
 
             {/* dotted background */}
             <div
-              className="pointer-events-none absolute inset-0 opacity-70 dark:opacity-30"
+              className="pointer-events-none absolute inset-0 opacity-70"
               style={{
                 backgroundImage:
-                  "radial-gradient(circle, rgba(0,0,0,0.12) 1px, transparent 1px)",
+                  "radial-gradient(circle, rgba(0,0,0,0.12) 1px, transparent 1px), radial-gradient(circle, rgba(255,255,255,0.12) 1px, transparent 1px)",
                 backgroundSize: "8px 8px",
+                backgroundPosition: "0 0, 4px 4px",
               }}
             />
 

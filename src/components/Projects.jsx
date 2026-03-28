@@ -29,9 +29,9 @@ function Projects(){
                          {/* projects display */}
                          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                              {projects.map((project) => (
-                                 <div key={project.id} className="group relative overflow-hidden rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:shadow-lg dark:hover:shadow-gray-800/50 transition-all">
+                                 <div key={project.id} className="group relative overflow-hidden rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-black hover:shadow-lg dark:hover:shadow-gray-800/50 transition-all">
                                      {/* Project Image */}
-                                     <div className="aspect-video overflow-hidden bg-gray-50 dark:bg-gray-800">
+                                     <div className="aspect-video overflow-hidden bg-gray-50 dark:bg-black">
                                          <img 
                                              src={project.image} 
                                              alt={project.title}
@@ -74,7 +74,7 @@ function Projects(){
                                              {project.tech.map((tech, index) => (
                                                  <span 
                                                      key={index}
-                                                     className="px-3 py-1 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 text-xs rounded-full"
+                                                     className="px-3 py-1 bg-white dark:bg-black border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 text-xs rounded-full"
                                                  >
                                                      {tech}
                                                  </span>

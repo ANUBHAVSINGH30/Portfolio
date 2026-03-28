@@ -11,7 +11,7 @@ import Hackathon from "./components/Hackathon";
 
 export default function App() {
   return (
-    <div className="relative bg-white dark:bg-gray-950 min-h-screen">
+    <div className="relative bg-white dark:bg-black min-h-screen">
       <Dock />
       <Hero />
       <About />
