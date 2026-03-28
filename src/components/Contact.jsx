@@ -53,7 +53,7 @@ function Contact() {
                   rel="noopener nereferrer"
                   className="text-teal-400 hover:underline"  
                 >
-                  mail me here
+                  mail me
                 </a>{" "}
                 and I'll respond whenever I can. I will ignore all soliciting.
               </p>
