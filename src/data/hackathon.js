@@ -17,7 +17,7 @@ export const hackathon = [
 	},
 	{
 		date: "Febraury 5th - 7th, 2026",
-		title: "NeuralX - (won 1st)",
+		title: "NeuralX - (1x Winner)",
 		location: "Tezpur University, Tezpur, Assam",
 		description:
 			"Created a product that analyzes food labels and provides personalized guidance.",
