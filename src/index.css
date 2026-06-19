@@ -11,3 +11,94 @@ body {
   padding: 0;
   font-family: 'Inter', sans-serif;
 }
+
+.github-contributions-calendar .react-activity-calendar {
+  width: 100% !important;
+}
+
+.github-contributions-calendar .react-activity-calendar__scroll-container {
+  overflow-x: hidden !important;
+}
+
+.github-contributions-calendar .react-activity-calendar__calendar {
+  width: 100%;
+  height: auto;
+}
+
+.github-contributions-calendar .react-activity-calendar__footer {
+  width: 100%;
+}
+
+.github-contributions-calendar .react-activity-calendar {
+  color: #6b7280;
+}
+
+.github-contributions-calendar rect[data-level="0"] {
+  fill: #ebedf0;
+}
+
+.dark .github-contributions-calendar .react-activity-calendar {
+  color: #9ca3af;
+}
+
+.dark .github-contributions-calendar rect[data-level="0"] {
+  fill: #111827;
+  stroke: rgba(255, 255, 255, 0.08);
+}
+
+.dark .github-contributions-calendar rect[data-level="1"] {
+  fill: #86efac;
+}
+
+.dark .github-contributions-calendar rect[data-level="2"] {
+  fill: #4ade80;
+}
+
+.dark .github-contributions-calendar rect[data-level="3"] {
+  fill: #22c55e;
+}
+
+.dark .github-contributions-calendar rect[data-level="4"] {
+  fill: #16a34a;
+}
+
+.github-contributions-calendar .react-activity-calendar__legend-colors svg:nth-of-type(1) rect {
+  fill: #ebedf0;
+}
+
+.github-contributions-calendar .react-activity-calendar__legend-colors svg:nth-of-type(2) rect {
+  fill: #9be9a8;
+}
+
+.github-contributions-calendar .react-activity-calendar__legend-colors svg:nth-of-type(3) rect {
+  fill: #40c463;
+}
+
+.github-contributions-calendar .react-activity-calendar__legend-colors svg:nth-of-type(4) rect {
+  fill: #30a14e;
+}
+
+.github-contributions-calendar .react-activity-calendar__legend-colors svg:nth-of-type(5) rect {
+  fill: #216e39;
+}
+
+.dark .github-contributions-calendar .react-activity-calendar__legend-colors svg:nth-of-type(1) rect {
+  fill: #111827;
+  stroke: rgba(255, 255, 255, 0.08);
+}
+
+.dark .github-contributions-calendar .react-activity-calendar__legend-colors svg:nth-of-type(2) rect {
+  fill: #86efac;
+}
+
+.dark .github-contributions-calendar .react-activity-calendar__legend-colors svg:nth-of-type(3) rect {
+  fill: #4ade80;
+}
+
+.dark .github-contributions-calendar .react-activity-calendar__legend-colors svg:nth-of-type(4) rect {
+  fill: #22c55e;
+}
+
+.dark .github-contributions-calendar .react-activity-calendar__legend-colors svg:nth-of-type(5) rect {
+  fill: #16a34a;
+}

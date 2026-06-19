@@ -7,7 +7,7 @@ function Skills (){
         <section className="pb-20">
             <Container>
                 <div className="flex flex-col items-center justify-center">
-                    <div className="max-w-2xl w-full">
+                    <div className="max-w-3xl w-full">
                         <h2 className="text-2xl text-black dark:text-white font-semibold tracking-tight">Skills</h2> 
                         <div className="pt-6 flex flex-wrap gap-3">
                             {skills.map((skill) => {

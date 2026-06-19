@@ -6,7 +6,7 @@ function Experience() {
     <section className="pb-19">
       <Container>
         <div className="flex flex-col items-center justify-center">
-          <div className="max-w-2xl w-full">
+          <div className="max-w-3xl w-full">
             <h2 className="text-2xl text-black dark:text-white font-semibold tracking-tight">
               Work Experience
             </h2>
