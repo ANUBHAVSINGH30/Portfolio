@@ -17,4 +17,10 @@ export const experience = [
     period: "2025 — Finalist (Top 6)",
     logo: "ieee logo.png",
   },
+  {
+    company: "VrixaaLabs",
+    role: "Full Stack Dev Intern",
+    period: "May 2026 - Present",
+    logo: "vrixaa.png"
+  }
 ];

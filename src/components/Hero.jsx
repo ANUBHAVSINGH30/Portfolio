@@ -9,7 +9,7 @@ function Hero() {
       <DotBackground position="top" />
 
       <Container>
-        <div className="flex flex-col md:flex-row items-center md:items-start gap-6 justify-center max-w-2xl mx-auto">
+        <div className="flex flex-col md:flex-row items-center md:items-start gap-6 justify-center max-w-3xl mx-auto">
           
           {/* Text */}
             <div className="text-center md:text-left">
@@ -26,9 +26,9 @@ function Hero() {
             <div className="shrink-0 mt-1">
               <div className="h-32 w-32 md:h-40 md:w-40 rounded-full overflow-hidden border-4 border-gray-300 dark:border-gray-600">
                 <img
-                  src="/profile-image.jpeg"
+                  src="/profileImage.jpeg"
                   alt="Anubhav"
-                  className="h-full w-full object-cover"
+                  className="h-full w-full object-cover scale-105"
                 />
               </div>
             </div>

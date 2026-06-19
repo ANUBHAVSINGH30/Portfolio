@@ -6,7 +6,7 @@ function Contact() {
     <section className="pb-28">
       <Container>
         <div className="flex flex-col items-center justify-center">
-          <div className="max-w-2xl w-full">
+          <div className="max-w-3xl w-full">
             <div className="relative overflow-hidden rounded-3xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-black px-6 py-4 text-center">
 
             {/* dotted background */}

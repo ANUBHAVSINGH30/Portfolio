@@ -6,7 +6,7 @@ function Hackathon() {
         <section className="pb-22">
             <Container>
                 <div className="flex flex-col items-center justify-center">
-                    <div className="max-w-2xl w-full">
+                    <div className="max-w-3xl w-full">
                         <div className="flex items-center w-full mb-8 mt-4">
                             {/* Left line */}
                             <div className="flex-1 h-px bg-linear-to-l from-gray-800 dark:from-gray-300 to-transparent" />
