@@ -17,25 +17,23 @@ function Dock() {
     { icon: FaFileAlt, label: "Resume", href: "/resume.pdf", download: true },
   ];
 
-  // Calculate scale based on distance from hovered icon
   const getScale = (index) => {
     if (hoveredIndex === null) return 1;
-    if (index === hoveredIndex) return 1.2; // Only hovered icon
-    return 1; // All others stay normal
+    if (index === hoveredIndex) return 1.2;
+    return 1;
   };
 
   return (
-    <div className="fixed bottom-8 left-1/2 -translate-x-1/2 z-50">
-      <div className="flex items-center gap-2 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border border-gray-200 dark:border-gray-700 rounded-full px-4 py-1 shadow-lg">
+    <div className="fixed bottom-8 left-1/2 -translate-x-1/2 z-50 px-4 w-full flex justify-center">
+      <div className="w-fit max-w-full flex items-center gap-1 min-[390px]:gap-2 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border border-gray-200 dark:border-gray-700 rounded-full px-2 min-[390px]:px-5 py-1 shadow-lg">
         {/* Social Links */}
         {dockItems.map((item, index) => (
-          <>
-            <div 
-              key={index} 
+          <React.Fragment key={index}>
+            <div
               className="relative flex items-end"
               style={{
                 transform: `scale(${getScale(index)})`,
-                transition: 'transform 0.2s ease-out',
+                transition: "transform 0.2s ease-out",
               }}
             >
               <a
@@ -45,11 +43,11 @@ function Dock() {
                 download={item.download}
                 onMouseEnter={() => setHoveredIndex(index)}
                 onMouseLeave={() => setHoveredIndex(null)}
-                className="flex items-center justify-center w-10 h-10 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200 text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white"
+                className="flex items-center justify-center w-9 h-9 min-[390px]:w-10 min-[390px]:h-10 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200 text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white"
               >
-                <item.icon className="text-2xl" />
+                <item.icon className="text-xl min-[390px]:text-[1.5rem]" />
               </a>
-              
+
               {/* Tooltip */}
               {hoveredIndex === index && (
                 <div className="absolute -top-14 left-1/2 -translate-x-1/2 bg-black dark:bg-white text-white dark:text-black text-xs px-3 py-1.5 rounded-lg whitespace-nowrap">
@@ -58,10 +56,12 @@ function Dock() {
                 </div>
               )}
             </div>
-            
-            {/* Divider after YouTube (index 4) */}
-            {index === 4 && <div className="w-px h-8 bg-gray-300 dark:bg-gray-600 mx-1" />}
-          </>
+
+            {/* Divider after YouTube */}
+            {index === 4 && (
+              <div className="w-px h-8 bg-gray-300 dark:bg-gray-600 mx-1" />
+            )}
+          </React.Fragment>
         ))}
 
         {/* Theme Toggle Button */}
@@ -69,23 +69,23 @@ function Dock() {
           onClick={toggleTheme}
           onMouseEnter={() => setHoveredIndex(dockItems.length)}
           onMouseLeave={() => setHoveredIndex(null)}
-          className="relative flex items-center justify-center w-10 h-10 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200 text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white"
+          className="relative flex items-center justify-center w-9 h-9 min-[390px]:w-10 min-[4390px]:h-10  rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200 text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white"
           style={{
             transform: `scale(${hoveredIndex === dockItems.length ? 1.2 : 1})`,
-            transition: 'transform 0.2s ease-out',
+            transition: "transform 0.2s ease-out",
           }}
           aria-label="Toggle theme"
         >
           {isDark ? (
-            <Sun className="w-5 h-5" />
+            <Sun className="w-4 h-4 min-[430px]:w-5 min-[390px]:h-5" />
           ) : (
-            <Moon className="w-5 h-5" />
+            <Moon className="w-4 h-4 min-[430px]:w-5 min-[390px]:h-5" />
           )}
-          
+
           {/* Tooltip */}
           {hoveredIndex === dockItems.length && (
             <div className="absolute -top-14 left-1/2 -translate-x-1/2 bg-black dark:bg-white text-white dark:text-black text-xs px-3 py-1.5 rounded-lg whitespace-nowrap">
-              {isDark ? 'Light Mode' : 'Dark Mode'}
+              {isDark ? "Light Mode" : "Dark Mode"}
               <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-2 h-2 bg-black dark:bg-white rotate-45" />
             </div>
           )}
