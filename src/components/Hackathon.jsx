@@ -25,11 +25,10 @@ function Hackathon() {
                         </div>
 
                         <div className="flex items-center justify-center">
-                             <p className="mt-7 text-gray-500 dark:text-gray-400 font-thin">I have participated in several hackathons where teams came together 
-                                to build working solutions within 2–3 days. These experiences pushed me beyond tutorials and classroom concepts, forcing me 
-                                to apply my skills in real time. I learned how to communicate technical ideas clearly, adapt when things broke, and deliver 
-                                under pressure. Hackathons shaped my confidence as a developer and strengthened my ability to turn ideas into working prototypes
-                                 quickly.</p>
+                             <p className="mt-7 text-gray-500 dark:text-gray-400 font-thin">I've participated in several hackathons, building working solutions within 
+                                2–3 days under real time pressure. These pushed me beyond tutorials — forcing me to communicate ideas clearly, adapt 
+                                when things broke, and ship working prototypes fast. One of these, JaaneKhana, won at NeuralX Hackathon, sharpening my 
+                                ability to turn ideas into real, working products quickly.</p>
                         </div>
 
                         <div className="mt-14">

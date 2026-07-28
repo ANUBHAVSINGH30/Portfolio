@@ -77,7 +77,7 @@ function Dock() {
           aria-label="Toggle theme"
         >
           {isDark ? (
-            <Sun className="w-4 h-4 min-[430px]:w-5 min-[390px]:h-5" />
+            <Sun className="w-4 h-4 min-[430px]:w-5 min-[39m0px]:h-5" />
           ) : (
             <Moon className="w-4 h-4 min-[430px]:w-5 min-[390px]:h-5" />
           )}
