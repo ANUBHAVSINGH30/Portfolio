@@ -18,7 +18,7 @@ function Hero() {
               </h1>
 
               <p className="mt-4 text-lg md:text-2xl text-gray-500 dark:text-gray-400 max-w-xl font-light tracking-tight leading-relaxed">
-                I'm a full-stack developer with a strong frontend focus, building clean, practical web applications. Active on Twitter.
+                Full-stack developer building scalable web applications — from database design to polished frontends.
               </p>
             </div>
 
