@@ -14,7 +14,7 @@ function Dock() {
     { icon: FaLinkedin, label: "LinkedIn", href: "https://www.linkedin.com/in/singh--anubhav-/" },
     { icon: FaXTwitter, label: "X", href: "https://x.com/anubhavSingh_30" },
     { icon: FaYoutube, label: "YouTube", href: "https://youtube.com" },
-    { icon: FaFileAlt, label: "Resume", href: "/resume.pdf", download: true },
+    { icon: FaFileAlt, label: "Resume", href: "/AnubhavSingh_Resume.pdf", newTab: true },
   ];
 
   const getScale = (index) => {
@@ -38,9 +38,8 @@ function Dock() {
             >
               <a
                 href={item.href}
-                target={item.href.startsWith("http") ? "_blank" : "_self"}
+                target={item.newTab || item.href.startsWith("http") ? "_blank" : "_self"}
                 rel="noopener noreferrer"
-                download={item.download}
                 onMouseEnter={() => setHoveredIndex(index)}
                 onMouseLeave={() => setHoveredIndex(null)}
                 className="flex items-center justify-center w-9 h-9 min-[390px]:w-10 min-[390px]:h-10 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200 text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white"
