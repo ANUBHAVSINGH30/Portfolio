@@ -1,28 +1,35 @@
+import { motion as Motion } from "framer-motion";
 import Container from "./Container";
 import { education } from "../data/education";
 
 function Education(){
     return(
         <section className="pb-18">
+            <Motion.div
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, ease: "easeOut" }}
+                viewport={{ once: true, margin: "-80px" }}
+            >
             <Container>
                 <div className="flex flex-col items-center justify-center">
                        <div className="max-w-3xl w-full">
-                         <h2 className="text-2xl text-black dark:text-white font-semibold tracking-tight">Education</h2>
+                         <h2 className="text-xs uppercase tracking-widest font-medium text-gray-400 dark:text-gray-500">Education</h2>
 
                          <div className="space-y-8 pt-6">
                              {education.map((item, index) => (
                                  <div key={index} className="flex items-center justify-between">
                                      <div className="flex items-center gap-4">
-                                         <div className="h-12 w-12 rounded-full border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 flex items-center justify-center">
+                                         <div className="h-12 w-12 rounded-[50%] overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-white flex items-center justify-center">
                                              <img
                                              src={item.logo}
                                              alt={item.institution}
-                                             className="h-8 w-8 object-contain"
+                                             className="h-full w-full object-cover"
                                              />
                                          </div>
 
                                          <div>
-                                             <p className="font-medium text-black dark:text-white">
+                                             <p className="text-sm font-medium text-black dark:text-white">
                                              {item.institution}
                                              </p>
                                              <p className="text-gray-500 dark:text-gray-400 text-sm">
@@ -41,6 +48,7 @@ function Education(){
                      </div>
                  </div>
             </Container>
+            </Motion.div>
         </section>
     )
 }

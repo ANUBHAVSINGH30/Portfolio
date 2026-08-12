@@ -1,9 +1,16 @@
+import { motion as Motion } from "framer-motion";
 import Container from "./Container";
 import DotBackground from "./DotBackground";
 
 function Hero() {
   return (
     <section className="relative pt-[14vh] pb-[4vh] overflow-hidden">
+      <Motion.div
+        initial={{ opacity: 0, y: 24 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, ease: "easeOut" }}
+        viewport={{ once: true, margin: "-80px" }}
+      >
 
       {/* dots stay full-width */}
       <DotBackground position="top" />
@@ -17,14 +24,14 @@ function Hero() {
                 Hi, I&apos;m Anubhav
               </h1>
 
-              <p className="mt-4 text-lg md:text-2xl text-gray-500 dark:text-gray-400 max-w-xl font-light tracking-tight leading-relaxed">
+              <p className="mt-4 text-sm text-gray-500 dark:text-gray-400 max-w-xl font-light tracking-tight leading-relaxed">
                 Full-stack developer building scalable web applications — from database design to polished frontends.
               </p>
             </div>
 
             {/* Image */}
             <div className="shrink-0 mt-1">
-              <div className="h-32 w-32 md:h-40 md:w-40 rounded-full overflow-hidden border-4 border-gray-300 dark:border-gray-600">
+              <div className="h-32 w-32 md:h-40 md:w-40 rounded-full overflow-hidden border-4 border-gray-300 dark:border-gray-600 bg-white dark:bg-white">
                 <img
                   src="/profileImage.jpeg"
                   alt="Anubhav"
@@ -35,6 +42,7 @@ function Hero() {
 
         </div>
       </Container>
+      </Motion.div>
     </section>
   );
 }
