@@ -1,13 +1,20 @@
+import { motion as Motion } from "framer-motion";
 import Container from "./Container";
 
 function About() {
   return (
     <section className="pb-18">
+      <Motion.div
+        initial={{ opacity: 0, y: 24 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, ease: "easeOut" }}
+        viewport={{ once: true, margin: "-80px" }}
+      >
       <Container>
         <div className="flex flex-col items-center justify-center">
     
 
-        <div className="mt-6 space-y-4 text-gray-500 dark:text-gray-400 leading-relaxed max-w-3xl">
+        <div className="mt-6 space-y-4 text-sm text-gray-500 dark:text-gray-400 leading-relaxed max-w-3xl">
           <h2 className="text-2xl text-black dark:text-white font-semibold tracking-tight">About</h2>
           <p className="font-light">           
            I'm a <span className="font-semibold text-black dark:text-white underline">B.Tech ECE student at Tezpur University</span> and a full-stack developer 
@@ -22,6 +29,7 @@ function About() {
         </div>
 
       </Container>
+      </Motion.div>
     </section>
   );
 }

@@ -1,4 +1,5 @@
 import React from "react";
+import { motion as Motion } from "framer-motion";
 import Container from "./Container";
 import { projects } from "../data/projects";
 
@@ -6,6 +7,12 @@ function Projects(){
 
     return(
         <section className="pb-22 pt-22">
+            <Motion.div
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, ease: "easeOut" }}
+                viewport={{ once: true, margin: "-80px" }}
+            >
             <Container>
                 <div className="flex flex-col items-center justify-center">
                     <div className="max-w-3xl w-full">
@@ -14,7 +21,7 @@ function Projects(){
                          <div className="flex-1 h-px bg-gradient-to-l from-gray-800 dark:from-gray-300 to-transparent" />
 
                          {/* Center pill */}
-                         <span className="mx-4 px-6 py-2 rounded-full bg-black dark:bg-white text-white dark:text-black text-sm font-medium">
+                         <span className="mx-4 px-6 py-2 rounded-full bg-black dark:bg-white text-white dark:text-black text-xs uppercase tracking-widest font-medium">
                              My Projects
                          </span>
 
@@ -23,13 +30,20 @@ function Projects(){
                          </div>
 
                          {/* Heading */}
-                         <h2 className="text-4xl tracking-tight font-bold text-center mb-5 text-black dark:text-white">Check out my latest work</h2>
-                         <p className="text-gray-500 dark:text-gray-400 text-center max-w-xl mx-auto mb-8 text-[18px]">I've worked on a variety of projects, from simple websites to complex web applications. Here are a few of my favorites.</p>
+                         <h2 className="text-xs uppercase tracking-widest font-medium text-center mb-5 text-gray-400 dark:text-gray-500">Projects</h2>
+                         <p className="text-gray-500 dark:text-gray-400 text-center max-w-xl mx-auto mb-8 text-sm">I've worked on a variety of projects, from simple websites to complex web applications. Here are a few of my favorites.</p>
 
                          {/* projects display */}
                          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                             {projects.map((project) => (
-                                 <div key={project.id} className="group relative overflow-hidden rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-black hover:shadow-lg dark:hover:shadow-gray-800/50 transition-all">
+                             {projects.map((project, index) => (
+                                 <Motion.div
+                                     key={project.id}
+                                     initial={{ opacity: 0, y: 24 }}
+                                     whileInView={{ opacity: 1, y: 0 }}
+                                     transition={{ delay: index * 0.1, duration: 0.5, ease: "easeOut" }}
+                                     viewport={{ once: true, margin: "-80px" }}
+                                     className="group relative overflow-hidden rounded-2xl border border-gray-200 dark:border-[rgba(255,255,255,0.08)] bg-white dark:bg-black hover:shadow-lg dark:hover:shadow-gray-800/50 transition-all"
+                                 >
                                      {/* Project Image */}
                                      <div className="aspect-video overflow-hidden bg-gray-50 dark:bg-black">
                                          <img 
@@ -74,20 +88,21 @@ function Projects(){
                                              {project.tech.map((tech, index) => (
                                                  <span 
                                                      key={index}
-                                                     className="px-3 py-1 bg-white dark:bg-black border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 text-xs rounded-full"
+                                                     className="px-2 py-0.5 bg-transparent border border-[rgba(0,0,0,0.12)] dark:border-[rgba(255,255,255,0.12)] text-gray-700 dark:text-gray-300 text-xs rounded-full"
                                                  >
                                                      {tech}
                                                  </span>
                                              ))}
                                          </div>
                                      </div>
-                                 </div>
+                                 </Motion.div>
                              ))}
                          </div>
 
                      </div>
                  </div>
             </Container>
+            </Motion.div>
         </section>
     )
 }

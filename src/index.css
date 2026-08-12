@@ -1,15 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Geist+Mono:wght@300;400;500;600;700&display=swap");
 @import "tailwindcss";
 
 @custom-variant dark (&:where(.dark, .dark *));
 
 html {
   scroll-behavior: smooth;
+  background-color: #000000;
+  font-family: "Geist Mono", monospace;
+  overscroll-behavior: none;
+  overflow-x: hidden;
 }
 
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Inter', sans-serif;
+  background-color: #000000;
+  font-family: "Geist Mono", monospace;
+  overflow-x: hidden;
 }
 
 .github-contributions-calendar .react-activity-calendar {
@@ -42,24 +49,24 @@ body {
 }
 
 .dark .github-contributions-calendar rect[data-level="0"] {
-  fill: #111827;
+  fill: #1e1e1e;
   stroke: rgba(255, 255, 255, 0.08);
 }
 
 .dark .github-contributions-calendar rect[data-level="1"] {
-  fill: #86efac;
+  fill: #1a4731;
 }
 
 .dark .github-contributions-calendar rect[data-level="2"] {
-  fill: #4ade80;
+  fill: #216e39;
 }
 
 .dark .github-contributions-calendar rect[data-level="3"] {
-  fill: #22c55e;
+  fill: #30a14e;
 }
 
 .dark .github-contributions-calendar rect[data-level="4"] {
-  fill: #16a34a;
+  fill: #39d353;
 }
 
 .github-contributions-calendar .react-activity-calendar__legend-colors svg:nth-of-type(1) rect {
@@ -83,22 +90,22 @@ body {
 }
 
 .dark .github-contributions-calendar .react-activity-calendar__legend-colors svg:nth-of-type(1) rect {
-  fill: #111827;
+  fill: #1e1e1e;
   stroke: rgba(255, 255, 255, 0.08);
 }
 
 .dark .github-contributions-calendar .react-activity-calendar__legend-colors svg:nth-of-type(2) rect {
-  fill: #86efac;
+  fill: #1a4731;
 }
 
 .dark .github-contributions-calendar .react-activity-calendar__legend-colors svg:nth-of-type(3) rect {
-  fill: #4ade80;
+  fill: #216e39;
 }
 
 .dark .github-contributions-calendar .react-activity-calendar__legend-colors svg:nth-of-type(4) rect {
-  fill: #22c55e;
+  fill: #30a14e;
 }
 
 .dark .github-contributions-calendar .react-activity-calendar__legend-colors svg:nth-of-type(5) rect {
-  fill: #16a34a;
+  fill: #39d353;
 }
