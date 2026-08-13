@@ -5,16 +5,16 @@ import DotBackground from "./DotBackground";
 function Hero() {
   return (
     <section className="relative pt-[14vh] pb-[4vh] overflow-hidden">
+      {/* dots stay full-width */}
+      <DotBackground position="top" />
+
       <Motion.div
         initial={{ opacity: 0, y: 24 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
         viewport={{ once: true, margin: "-80px" }}
+        className="relative z-10"
       >
-
-      {/* dots stay full-width */}
-      <DotBackground position="top" />
-
       <Container>
         <div className="flex flex-col md:flex-row items-center md:items-start gap-6 justify-center max-w-3xl mx-auto">
           

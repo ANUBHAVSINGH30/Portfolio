@@ -1,7 +1,7 @@
 export default function DotBackground({ position }) {
   return (
     <div
-      className={`absolute inset-x-0 ${
+      className={`absolute inset-x-0 z-0 ${
         position === "top" ? "top-0" : "bottom-0"
       } h-32 pointer-events-none`}
       style={{

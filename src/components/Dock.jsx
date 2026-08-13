@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { FaHome, FaGithub, FaLinkedin, FaYoutube, FaFileAlt } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { useTheme } from "../hooks/useTheme";
@@ -6,6 +6,7 @@ import { Sun, Moon } from "lucide-react";
 
 function Dock() {
   const [hoveredIndex, setHoveredIndex] = useState(null);
+  const dockRef = useRef(null);
   const { isDark, toggleTheme } = useTheme();
 
   const dockItems = [
@@ -23,8 +24,36 @@ function Dock() {
     return 1;
   };
 
+  useEffect(() => {
+    if (hoveredIndex !== dockItems.length) return;
+
+    const timer = setTimeout(() => setHoveredIndex(null), 2000);
+    return () => clearTimeout(timer);
+  }, [hoveredIndex, dockItems.length]);
+
+  useEffect(() => {
+    const handleScroll = () => setHoveredIndex(null);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dockRef.current?.contains(event.target)) return;
+      setHoveredIndex(null);
+    };
+
+    document.addEventListener("touchstart", handleClickOutside);
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("touchstart", handleClickOutside);
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
   return (
-    <div className="fixed bottom-8 left-1/2 -translate-x-1/2 z-50 px-4 w-full flex justify-center">
+    <div ref={dockRef} className="fixed bottom-8 left-1/2 -translate-x-1/2 z-50 px-4 w-full flex justify-center">
       <div className="w-fit max-w-full flex items-center gap-1 min-[390px]:gap-2 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border border-gray-200 dark:border-gray-700 rounded-full px-2 min-[390px]:px-5 py-1 shadow-lg">
         {/* Social Links */}
         {dockItems.map((item, index) => (
@@ -58,7 +87,7 @@ function Dock() {
 
             {/* Divider after YouTube */}
             {index === 4 && (
-              <div className="w-px h-8 bg-gray-300 dark:bg-gray-600 mx-1" />
+              <div className="w-px h-8 shrink-0 bg-gray-300 dark:bg-gray-600 mx-1" />
             )}
           </React.Fragment>
         ))}
