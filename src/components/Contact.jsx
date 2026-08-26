@@ -56,7 +56,7 @@ function Contact() {
                 >
                   mail me
                 </a>{" "}
-                and I'll respond whenever I can. I will ignore all soliciting.
+                and I'll respond whenever I can.
               </p>
 
             </div>
